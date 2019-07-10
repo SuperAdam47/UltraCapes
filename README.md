@@ -2,7 +2,7 @@
 Opens a UI where you can choose nice Capes for PmmP!
 
 
-# Advantages:
+# Features:
    
 • Permissions for using all Capes or single Capes!
    
