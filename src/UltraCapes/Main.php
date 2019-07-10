@@ -167,7 +167,7 @@ class Main extends PluginBase implements Listener {
         $form->setTitle("§bUltraCapes Menu");
         $form->setContent("§f>> Here you can choose a Cape!");
         $form->addButton("§4Abort", 0);
-        $form->addButton("§0Remove a Cape", 1);
+        $form->addButton("§0Remove your Cape", 1);
         $form->addButton("§eBlue-Creeper-Cape", 2);
         $form->addButton("§eEndermancape", 3);
         $form->addButton("§eEnergycape", 4);
@@ -186,9 +186,9 @@ class Main extends PluginBase implements Listener {
                             return true;
                             break;
                         case "remove":
-                    $player->setSkin(new Skin("Standard_Custom", $this->plugin->skins[$player->getName()]));
+                    $player->setSkin(new Skin("Standard_Custom", $this->skins[$player->getName()]));
                     $player->sendSkin();
-                            $player->sendMessage("§f[§bServer§f] §aSkin resetted!");
+                            $player->sendMessage("§f[§bServer§f] §aYour Skin was resetted!");
                             return true;
                         case "blue_creeper":
                             if (!$player->hasPermission("blue_creeper.cape")) {
