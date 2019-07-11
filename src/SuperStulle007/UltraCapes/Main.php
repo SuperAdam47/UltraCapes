@@ -11,7 +11,7 @@
 
 declare(strict_types=1);
 
-namespace UltraCapes;
+namespace SuperStulle007/UltraCapes;
 
 use pocketmine\plugin\PluginBase;
 use pocketmine\entity\Skin;
