@@ -35,7 +35,7 @@ class Main extends PluginBase implements Listener {
     protected $skin = [];
     public $skins;
     /** @var string */
-    public $noperm = C::AQUA . "§f[§bServer§f] §cDir fehlen Berechtigungen für diesen Befehl!";
+    public $noperm = C::AQUA . "§f[§bServer§f] §cYou don't have Permissions for this Action!";
 
     /**
      * @return void
@@ -186,7 +186,8 @@ class Main extends PluginBase implements Listener {
                             return true;
                             break;
                         case "remove":
-		unset($this->skin[$player->getName()]);
+	$player->setSkin(new Skin("Standard_Custom", $this->skins[$player->getName()]));
+                    $player->sendSkin();
                             $player->sendMessage("§f[§bServer§f] §aSkin resetted!");
                             return true;
                         case "blue_creeper":
